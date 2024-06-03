@@ -1,4 +1,7 @@
 import Link from "next/link";
+import { db } from "~/server/db";
+
+export const dynamic = "force-dynamic";
 
 const imageUrls = [
   "https://utfs.io/f/90ba1135-a67e-4dd6-9615-71bb5634ec07-hzt98r.jpeg",
@@ -9,7 +12,9 @@ const images = imageUrls.map((url, index) => ({
   url,
 }));
 
-export default function HomePage() {
+export default async function HomePage() {
+  // const jobSeekers = await db.query.jobSeekerProfiles.findMany();
+  // console.log(jobSeekers);
   return (
     <main>
       <h1 className="text-center text-3xl font-bold text-stone-700">
