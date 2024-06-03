@@ -1,7 +1,6 @@
 import { execSync } from "child_process";
 import path from "path";
 import fs from "fs";
-import dotenv from "dotenv";
 
 // Determine environment
 const env = process.env.NODE_ENV || "development";
